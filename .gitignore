@@ -27,3 +27,7 @@
 *.exe
 *.out
 *.app
+
+.kdev4/
+build/
+mnasoft_lib.kdev4
