@@ -21,6 +21,8 @@
 #ifndef FVECTOR_H
 #define FVECTOR_H
 
+#include "mnasoft_lib_global.h"
+
 #include <iostream>
 
 using namespace std;

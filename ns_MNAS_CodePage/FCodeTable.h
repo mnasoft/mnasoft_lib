@@ -1,6 +1,8 @@
 #ifndef CODETABLE_H
 #define CODETABLE_H
 
+#include "mnasoft_lib_global.h"
+
 /**
     Класс CodeTable содержит набор утилит для преобразования кодировок файлов.
 */

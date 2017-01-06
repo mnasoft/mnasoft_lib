@@ -20,6 +20,8 @@
 #ifndef FMATRIX_H
 #define FMATRIX_H
 
+#include "mnasoft_lib_global.h"
+
 #include <iostream>
 #include "fvector.h"
 

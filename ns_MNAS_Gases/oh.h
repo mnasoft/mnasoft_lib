@@ -20,6 +20,8 @@
 #ifndef OH_H
 #define OH_H
 
+#include "mnasoft_lib_global.h"
+
 #include "teplojomkost.h"
 
 namespace ns_MNAS_Gases

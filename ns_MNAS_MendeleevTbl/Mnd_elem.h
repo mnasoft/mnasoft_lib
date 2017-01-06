@@ -1,9 +1,9 @@
-/**
-@author Матвеев Николай
-*/
+/** @author Матвеев Николай Анатольевич */
 
 #ifndef MND_ELEM_H
 #define MND_ELEM_H
+
+#include "mnasoft_lib_global.h"
 
 #include <elem.h>
 

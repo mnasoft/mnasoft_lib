@@ -17,8 +17,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
-#ifndef NS_MNAS_GASES_H
-#define ns_MNAS_GASES_H
+#ifndef AIR_H
+#define AIR_H
 
 #include "teplojomkost.h"
 
@@ -35,4 +35,4 @@ public:
 };
 }
 
-#endif //ns_MNAS_GASES_H
+#endif //AIR_H

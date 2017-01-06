@@ -20,6 +20,8 @@
 #ifndef FPOLYNOM_H
 #define FPOLYNOM_H
 
+#include "mnasoft_lib_global.h"
+
 #include "fmatrix.h"
 #include "fvector.h"
 

@@ -21,7 +21,6 @@
 #ifndef C2H6_H
 #define C2H6_H
 
-
 #include "mnasoft_lib_global.h"
 
 #include <teplojomkost.h>

@@ -20,6 +20,8 @@
 #ifndef SO2_H
 #define SO2_H
 
+#include "mnasoft_lib_global.h"
+
 #include "teplojomkost.h"
 
 namespace ns_MNAS_Gases

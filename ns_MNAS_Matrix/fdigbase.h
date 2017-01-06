@@ -21,6 +21,8 @@
 #ifndef FDIG_H
 #define FDIG_H
 
+#include "mnasoft_lib_global.h"
+
 #include <iostream>
 using namespace std;
 

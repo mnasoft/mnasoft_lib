@@ -3,6 +3,8 @@
 #ifndef ELEM_H
 #define ELEM_H
 
+#include "mnasoft_lib_global.h"
+
 #include <string>
 using namespace std;
 

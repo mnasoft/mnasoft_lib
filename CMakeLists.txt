@@ -56,10 +56,35 @@ include_directories(
   ns_MNAS_ValDimension)
 
 set(ns_MNAS_HalfDiv_SRCS      ns_MNAS_HalfDiv/method_half_div.cpp)
+
 set(ns_MNAS_ValDimension_SRCS ns_MNAS_ValDimension/eqation_analizer.cpp  ns_MNAS_ValDimension/eqation_el.cpp  ns_MNAS_ValDimension/nm_value.cpp)
 
+set(ns_MNAS_Matrix_SRCS ns_MNAS_Matrix/fdigbase.cpp ns_MNAS_Matrix/fvector.cpp
+                        ns_MNAS_Matrix/fpolynom.cpp ns_MNAS_Matrix/table.cpp
+			ns_MNAS_Matrix/fmatrix.cpp)
+
+set(ns_MNAS_Error_SRCS        ns_MNAS_Error/ferror.cpp)
+
+set(ns_MNAS_MendeleevTbl_SRCS ns_MNAS_MendeleevTbl/elem.cpp ns_MNAS_MendeleevTbl/Mnd_elem.cpp)
+
+set(ns_MNAS_CodePage_SRCS     ns_MNAS_CodePage/FCodeTable.cpp)
+
+set(ns_MNAS_Gases_SRCS        ns_MNAS_Gases/co.cpp ns_MNAS_Gases/no2.cpp ns_MNAS_Gases/c6h6.cpp
+                              ns_MNAS_Gases/c2h4.cpp ns_MNAS_Gases/ch4.cpp ns_MNAS_Gases/teplojomkost.cpp
+			      ns_MNAS_Gases/h2.cpp ns_MNAS_Gases/c2h5oh.cpp ns_MNAS_Gases/n2_atm.cpp
+			      ns_MNAS_Gases/c3h6.cpp ns_MNAS_Gases/h2s.cpp ns_MNAS_Gases/c2h2.cpp
+			      ns_MNAS_Gases/c3h8.cpp ns_MNAS_Gases/co2.cpp ns_MNAS_Gases/no.cpp
+			      ns_MNAS_Gases/so2.cpp ns_MNAS_Gases/c4h6_1-3.cpp ns_MNAS_Gases/c2h6.cpp
+			      ns_MNAS_Gases/oh.cpp ns_MNAS_Gases/n2.cpp ns_MNAS_Gases/air.cpp
+			      ns_MNAS_Gases/h2o.cpp ns_MNAS_Gases/o2.cpp)
+
 set(ns_MNAS_lib_SRCS ${ns_MNAS_HalfDiv_SRCS}
-                     ${ns_MNAS_ValDimension_SRCS})
+                     ${ns_MNAS_ValDimension_SRCS}
+		     ${ns_MNAS_Matrix_SRCS}
+		     ${ns_MNAS_Gases_SRCS}
+		     ${ns_MNAS_MendeleevTbl_SRCS}
+		     ${ns_MNAS_Error_SRCS}
+		     ${ns_MNAS_CodePage_SRCS})
 
 set(ns_MNAS__HEADERS             mnasoft_lib_global.h)
 set(ns_MNAS_CodePage_HEADERS     ns_MNAS_CodePage/FCodeTable.h)
