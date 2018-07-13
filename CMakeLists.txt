@@ -6,6 +6,22 @@ message ("CMAKE_SOURCE_DIR = ${CMAKE_SOURCE_DIR}")
 
 set(INSTALL_PREFIX_FOR_WINDOWS "${CMAKE_SOURCE_DIR}/../usr")
 set(INSTALL_PREFIX_FOR_LINUX   "/home/namatv/usr")
+set(MSYSTEM "$ENV{MSYSTEM}")
+set(INSTALL_PREFIX_FOR_MSYS "D:/PRG/msys32/usr/local")
+
+if ($ENV{MSYSTEM} MATCHES "MINGW32")
+  set(CMAKE_INSTALL_PREFIX ${INSTALL_PREFIX_FOR_MSYS})
+  message ("CMAKE_SYSTEM_NAME = ${CMAKE_SYSTEM_NAME}")
+  message ("CMAKE_INSTALL_PREFIX = ${CMAKE_INSTALL_PREFIX}")
+elseif (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+  set(CMAKE_INSTALL_PREFIX ${INSTALL_PREFIX_FOR_WINDOWS})
+  message ("CMAKE_SYSTEM_NAME = ${CMAKE_SYSTEM_NAME}")
+  message ("CMAKE_INSTALL_PREFIX =  ${CMAKE_INSTALL_PREFIX}")
+elseif (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+  set(CMAKE_INSTALL_PREFIX ${INSTALL_PREFIX_FOR_LINUX})
+  message ("${BoldRed}CMAKE_SYSTEM_NAME = ${CMAKE_SYSTEM_NAME}${ColourReset}")
+  message ("${BoldGreen}CMAKE_INSTALL_PREFIX =  ${CMAKE_INSTALL_PREFIX}${ColourReset}")
+endif ($ENV{MSYSTEM} MATCHES "MINGW32")
 
 add_definitions(-DMNAS_LIBRARY)
 
@@ -35,21 +51,9 @@ find_package(Qt5Core)
   set(BoldWhite   "${Esc}[1;37m")
 #endif()
 
-if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
-  set(CMAKE_INSTALL_PREFIX ${INSTALL_PREFIX_FOR_WINDOWS})
-  message ("CMAKE_SYSTEM_NAME = ${CMAKE_SYSTEM_NAME}")
-  message ("CMAKE_INSTALL_PREFIX =  ${CMAKE_INSTALL_PREFIX}")
-endif (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
-
-if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
-  set(CMAKE_INSTALL_PREFIX ${INSTALL_PREFIX_FOR_LINUX})
-  message ("${BoldRed}CMAKE_SYSTEM_NAME = ${CMAKE_SYSTEM_NAME}${ColourReset}")
-  message ("${BoldGreen}CMAKE_INSTALL_PREFIX =  ${CMAKE_INSTALL_PREFIX}${ColourReset}")
-endif (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
-
-include_directories(             src
-                                 src/ns_MNAS_CodePage
-				 src/ns_MNAS_Error
+include_directories(src
+                    src/ns_MNAS_CodePage
+                    src/ns_MNAS_Error
 				 src/ns_MNAS_Gases
 				 src/ns_MNAS_HalfDiv
 				 src/ns_MNAS_Matrix
